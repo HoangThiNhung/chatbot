@@ -121,7 +121,8 @@ def predict(sentence, userID='1', show_details=False):
                     if not 'context_filter' in i or                         (userID in context and 'context_filter' in i and i['context_filter'] == context[userID]):
                         if show_details: print ('tag:', i['tag'])
                         if classes == 'menu':
-                            menu = session.query(Menu).filter(Menu.n_gram_search_text.like('%'+entity[0]+'%')).all()
+                            entity = entity[0] if len(entity) > 0 else ''
+                            menu = session.query(Menu).filter(Menu.n_gram_search_text.like('%'+entity+'%')).all()
                             if len(menu) > 0:
                                 print(i['responses'][0])
                                 return print(menu)

@@ -8,8 +8,8 @@
          "responses": ["Xin chào quý khách nhà hàng chúng tôi rất hân hạnh được phục vụ. Mời quý Khách", "Xin chào quý khách nhà hàng chúng tôi rất tiếc hiện tại đã full chỗ ngồi, Hiện gặp lại quý khách lần sau."]
         },
         {"tag": "menu",
-         "patterns": ["Tôi muốn gọi món", "Món nào ở đây là ngon nhất ạ ? ","Cho anh xem thực đơn của quán","Em ơi, cho anh gọi món", "Nhà hàng có những loại món ăn nào nhỉ", "có thể cho tôi mượn menu được không", "tôi muốn mượn nenu của nhà hàng", "vui lòng cho chúng tôi xem danh sách các món ăn", "Hôm nay có món gì ngon không ạ?", "Ngoài cơm ra thì còn món khác không ạ!", "Ở đây có những món nào ạ?", "Chị làm ơn cho em xem menu"],
-         "responses": ["dạ đây là menu của nhà hàng, quý khách có thể tham khảo", "Xin lỗi quý hạnh hiện tại nhà hàng chúng tôi không có các menu quý khách yêu cầu"]
+         "patterns": ["Tôi muốn gọi món",  "Thực đơn gồm có những gì", "cho mình thực đơn của bạn", "Món nào ở đây là ngon nhất ạ ? ","Cho anh xem thực đơn của quán","Em ơi, cho anh gọi món", "Nhà hàng có những loại món ăn nào nhỉ", "có thể cho tôi mượn menu được không", "tôi muốn mượn nenu của nhà hàng", "vui lòng cho chúng tôi xem danh sách các món ăn", "Hôm nay có món gì ngon không ạ?", "Ngoài cơm ra thì còn món khác không ạ!", "Ở đây có những món nào ạ?", "Chị làm ơn cho em xem menu"],
+         "responses": ["Kính chào quý khách. Chúng tôi xin gửi tới quý khách thực đơn của nhà  hàng.", "Xin lỗi quý hạnh hiện tại nhà hàng chúng tôi không có các menu quý khách yêu cầu"]
         },
         {"tag": "transaction",
          "patterns": ["Bạn ơi giúp mình thanh toán.", "Phục vụ thanh toán giúp bàn mình", "Phục vụ tính tiền giúp mình", "em ơi thanh toán giúp cho anh", "thanh toán em ơi", "bạn giúp mình thanh toán với nhé", "Hóa đơn của em hết bao nhiêu tiền ạ?", "chị tính tiền giúp em với nhé.", "tổng hóa đơn của mình là bao nhiêu"],
@@ -25,7 +25,7 @@
         },
         {"tag": "promotion",
          "patterns": ["Quán có thêm dịch vụ phụ không ạ","Quán hôm nay có chương trình khuyến mãi nào không em?", "Nhà hàng có khuyến mãi gì không?", "Tôi tổ chức sinh nhật tại cửa hàng thì có những khuyến mãi gì?", "hôm nay có khuyến mại gì không?"],
-         "responses": ["Đây là danh sách các chương trình khuyến mại của nhà hàng. Mời quý khách tham khảo", "Xin lỗi quý khách, hiện tại nhà hàng chúng tôi đang không trong chương trình khuyến mại nào"]
+         "responses": ["Hiện nay, chúng tôi đang có các chương trình khuyến mãi sau. Mời quý khách tham khảo", "Xin lỗi quý khách, hiện tại nhà hàng chúng tôi đang không trong chương trình khuyến mại nào"]
         },
         {"tag": "vat",
          "patterns": ["Giá đồ ở đây đã có VAT chưa ạ?", "hóa đơn của mình có kèm theo VAT không", "Mình muốn nhận hóa đơn đỏ", "ở đây có xuất hóa đơn đỏ không ạ?"],
