@@ -1,0 +1,43 @@
+{"data": [
+        {"tag": "greeting",
+         "patterns": ["Xin chào, tôi muốn gọi phục vụ bàn", "có ai ở đây không ạ", "bạn ơi", "phục vụ"],
+         "responses": ["Xin chào, chúng tôi có thể giúp gì cho quy khách?"]
+        },
+        {"tag": "table",
+         "patterns": ["chỗ bạn còn bàn trống không?","Chỗ còn đủ cho 8 người không ?","trên 1 tầng có thể chứa được 30 người không?" ,"Còn chỗ không anh?","Em có phòng nào view đẹp không?", "xin lỗi cho mình hỏi nhà hàng còn bàn không ạ", "Mình có 4 người, bên bạn còn đủ chỗ không?", "Chị ơi, còn bàn cho 4 người không ạ?", "Mình muốn đặt bàn tiệc cho công ty tại nhà hàng" ],
+         "responses": ["Xin chào quý khách nhà hàng chúng tôi rất hân hạnh được phục vụ. Mời quý Khách", "Xin chào quý khách nhà hàng chúng tôi rất tiếc hiện tại đã full chỗ ngồi, Hiện gặp lại quý khách lần sau."]
+        },
+        {"tag": "menu",
+         "patterns": ["Tôi muốn gọi món", "Món nào ở đây là ngon nhất ạ ? ","Cho anh xem thực đơn của quán","Em ơi, cho anh gọi món", "Nhà hàng có những loại món ăn nào nhỉ", "có thể cho tôi mượn menu được không", "tôi muốn mượn nenu của nhà hàng", "vui lòng cho chúng tôi xem danh sách các món ăn", "Hôm nay có món gì ngon không ạ?", "Ngoài cơm ra thì còn món khác không ạ!", "Ở đây có những món nào ạ?", "Chị làm ơn cho em xem menu"],
+         "responses": ["dạ đây là menu của nhà hàng, quý khách có thể tham khảo", "Xin lỗi quý hạnh hiện tại nhà hàng chúng tôi không có các menu quý khách yêu cầu"]
+        },
+        {"tag": "transaction",
+         "patterns": ["Bạn ơi giúp mình thanh toán.", "Phục vụ thanh toán giúp bàn mình", "Phục vụ tính tiền giúp mình", "em ơi thanh toán giúp cho anh", "thanh toán em ơi", "bạn giúp mình thanh toán với nhé", "Hóa đơn của em hết bao nhiêu tiền ạ?", "chị tính tiền giúp em với nhé.", "tổng hóa đơn của mình là bao nhiêu"],
+         "responses": ["Hóa đơn của anh chị hết 1.230.000 VNĐ"]
+        },
+        {"tag": "payment",
+         "patterns": ["mình có thể thanh toán bằng credit card được không?", "Mình thanh toán qua thẻ được chứ", "Mình không mang theo tiền mặt có thể thanh toán giúp mình qua thẻ ATM"],
+         "responses": ["Nhà hàng chúng tôi chấp nhận tất cả các loại hình thức thanh toán giao dịch tiền mặt hoặc thông qua các thẻ ATM, thẻ Credit card quý khách vui lòng đợi nhân viên phục vụ trong giây lát."]
+        },
+        {"tag": "completeorder",
+         "patterns": ["Tôi nghĩ như vậy là đủ rồi", "tôi muốn gọi bún bò huế, nem lụi và 4 cốc trà đá", "Mang cho tôi một ít nước được không?"],
+         "responses": ["Cảm ơn quý khách đã gọi món, Xin quý khách vui lòng đợi trong ít phút, nhân viên phục vụ của chúng tôi sẽ mang các món ăn theo yêu cầu của quý khách đến bàn."]
+        },
+        {"tag": "promotion",
+         "patterns": ["Quán có thêm dịch vụ phụ không ạ","Quán hôm nay có chương trình khuyến mãi nào không em?", "Nhà hàng có khuyến mãi gì không?", "Tôi tổ chức sinh nhật tại cửa hàng thì có những khuyến mãi gì?", "hôm nay có khuyến mại gì không?"],
+         "responses": ["Đây là danh sách các chương trình khuyến mại của nhà hàng. Mời quý khách tham khảo", "Xin lỗi quý khách, hiện tại nhà hàng chúng tôi đang không trong chương trình khuyến mại nào"]
+        },
+        {"tag": "vat",
+         "patterns": ["Giá đồ ở đây đã có VAT chưa ạ?", "hóa đơn của mình có kèm theo VAT không", "Mình muốn nhận hóa đơn đỏ", "ở đây có xuất hóa đơn đỏ không ạ?"],
+         "responses": ["Tất cả các đồ ăn tại nhà hàng chúng tôi đều chưa bao gồm VAT, VAT là 10% giá trị đơn hàng, nếu quý khách muốn nhận hóa đơn đỏ xin vui lòng cung cấp mã số thuế tại quầy thu ngân. Xin cảm ơn!"]
+        },
+        {"tag": "specialRoom",
+         "patterns": ["Em đi theo nhóm có chỗ nào rộng rộng không ạ!", "Quán có phòng riêng không ạ", "Mình cần không gian thật yên tĩnh", "cho mình vị trí rộng, đủ chỗ cho hơn 30 người."],
+         "responses": ["Nhà hàng chúng tôi có các phòng VIP 1, VIP 2, VIP 3 với không gian rộng, yên tĩnh ngoài ra với những nhóm khách từ 40 người trở lên, chúng tôi cũng cung cấp cho các bạn địa điểm có thể hòa mình với thiên nhiên cùng các trò chơi team building thú vị. "]
+        },
+        {"tag": "otherFood",
+         "patterns": ["Quán có cho mang đồ ăn ngoài vào không ạ", "Mang đồ ngoài vào có tính thêm tiền không ạ?", "Mình có được mang theo đồi ăn khác vào nhà hàng không?"],
+         "responses": ["Vì một số lý do, xin quý khách vui lòng không mang theo đồ ăn bên ngoài vào nhà hàng, Hãy là những thực khách lịch sự. xin cảm ơn."]
+        }
+   ]
+}
