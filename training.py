@@ -8,6 +8,7 @@ import nltk
 from nltk.stem.lancaster import LancasterStemmer
 from pyvi.pyvi import ViTokenizer
 from ngram import ngrams
+from underthesea import pos_tag
 
 stemmer = LancasterStemmer()
 
@@ -43,14 +44,12 @@ for intent in intents['data']:
         documents.append((text, intent['tag']))
         if intent['tag'] not in classes:
             classes.append(intent['tag'])
-            
+
 words = sorted(list(set(words)))
 
 classes = sorted(list(set(classes)))
 
-print (len(documents), "documents")
-print (len(classes), "classes", classes)
-print (len(words), "unique stemmed words", words)
+print(words)
 
 
 # In[4]:
@@ -95,9 +94,14 @@ print(train_y[1])
 tf.reset_default_graph()
 
 net = tflearn.input_data(shape=[None, len(train_x[0])])
-net = tflearn.fully_connected(net, 8)
-net = tflearn.fully_connected(net, 8)
-
+net = tflearn.fully_connected(net, 128)
+net = tflearn.dropout(net, 0.5)
+net = tflearn.fully_connected(net, 64)
+net = tflearn.dropout(net, 0.5)
+net = tflearn.fully_connected(net, 64)
+net = tflearn.dropout(net, 0.5)
+net = tflearn.fully_connected(net, 32)
+net = tflearn.dropout(net, 0.5)
 net = tflearn.fully_connected(net, len(train_y[0]), activation='softmax')
 net = tflearn.regression(net, optimizer='adam', loss='categorical_crossentropy')
 
@@ -112,4 +116,3 @@ model.save('models/model.tflearn')
 
 import pickle
 pickle.dump( {'words':words, 'classes':classes, 'train_x':train_x, 'train_y':train_y}, open( "models/training_data", "wb" ) )
-

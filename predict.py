@@ -43,8 +43,14 @@ with open('data/training.json') as json_data:
 
 
 net = tflearn.input_data(shape=[None, len(train_x[0])])
-net = tflearn.fully_connected(net, 8)
-net = tflearn.fully_connected(net, 8)
+net = tflearn.fully_connected(net, 128)
+net = tflearn.dropout(net, 0.5)
+net = tflearn.fully_connected(net, 64)
+net = tflearn.dropout(net, 0.5)
+net = tflearn.fully_connected(net, 64)
+net = tflearn.dropout(net, 0.5)
+net = tflearn.fully_connected(net, 32)
+net = tflearn.dropout(net, 0.5)
 net = tflearn.fully_connected(net, len(train_y[0]), activation='softmax')
 net = tflearn.regression(net, optimizer='adam', loss='categorical_crossentropy')
 
@@ -121,8 +127,7 @@ def predict(sentence, userID='1', show_details=False):
                     if not 'context_filter' in i or                         (userID in context and 'context_filter' in i and i['context_filter'] == context[userID]):
                         if show_details: print ('tag:', i['tag'])
                         if classes == 'menu':
-                            entity = entity[0] if len(entity) > 0 else ''
-                            menu = session.query(Menu).filter(Menu.n_gram_search_text.like('%'+entity+'%')).all()
+                            menu = session.query(Menu).filter(Menu.n_gram_search_text.like('%'+entity[0]+'%')).all()
                             if len(menu) > 0:
                                 print(i['responses'][0])
                                 return print(menu)
